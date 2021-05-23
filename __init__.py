@@ -13,7 +13,7 @@ class MycroftKodi(MycroftSkill):
     def handle_kodi_mycroft(self, message):
         volume = message.data.get('volume')
         if volume is not None:
-            self.speak('ds volumen von kodi wird auf '+volume+' gesetzt')
+            self.speak('die lautstärke von kodi wird auf '+volume+' gesetzt')
 
 def create_skill():
     return MycroftKodi()
