@@ -17,7 +17,7 @@ class MycroftKodi(MycroftSkill):
             if utterances and self.voc_match(utterances[0], 'lautstaerke vier'):
                 self.speak_dialog('vier')
                 return True
-            else if utterances and self.voc_match(utterances[0], 'lautstaerke drie'):
+            elif utterances and self.voc_match(utterances[0], 'lautstaerke drei'):
                 self.speak_dialog('drei')
                 return True
 
