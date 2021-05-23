@@ -14,8 +14,8 @@ class MycroftKodi(MycroftSkill):
         self.speak_dialog('kodi.mycroft')
 
     def converse(self, utterances, lang):
-            if utterances and self.voc_match(utterances[0], 'pegel vier'):
-                self.speak_dialog('vier')
+            if utterances and self.voc_match(utterances[0], 'pegel'):
+                self.speak_dialog('pegel')
                 return True
             elif utterances and self.voc_match(utterances[0], 'pegel drei'):
                 self.speak_dialog('drei')
