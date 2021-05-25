@@ -13,9 +13,9 @@ class MycroftKodi(MycroftSkill):
     def handle_kodi_mycroft(self, message):
         volume = message.data.get('volume')
         if volume is not None:
-            server = KodiJSONClient('192.168.1.103', '8080', 'kodi', 'kodi')
+            server = KodiJSONClient('192.168.1.107', '8080', 'kodi', 'kodi')
             kodiApplication=server.Application
-            kodiApplication.SetVolume(1)
+            kodiApplication.SetVolume(100)
             self.speak('die lautstärke von kodi wird auf '+volume+' gesetzt')
 
 def create_skill():
