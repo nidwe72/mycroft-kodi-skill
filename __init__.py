@@ -16,7 +16,7 @@ class MycroftKodi(MycroftSkill):
 
         utterance = message.data.get('utterance')
     
-        if utterance=='blumen 3'
+        if utterance=='blumen 3':
             volumePercents=30;
             server = KodiJSONClient('192.168.1.107', '8080', 'kodi', 'kodi')
             kodiApplication=server.Application
