@@ -13,6 +13,16 @@ class MycroftKodi(MycroftSkill):
 
     @intent_file_handler('kodi.mycroft.volume.intent')
     def handle_kodi_mycroft(self, message):
+
+        utterance = message.data.get('utterance')
+    
+        if utterance=='blumen 3'
+            volumePercents=30;
+            server = KodiJSONClient('192.168.1.107', '8080', 'kodi', 'kodi')
+            kodiApplication=server.Application
+            kodiApplication.SetVolume(volumePercents)
+            beep.beep(sound='error')            
+
         volume = message.data.get('volume')
         if volume is not None:
             volumePercents=int(volume)*10;
