@@ -13,7 +13,7 @@ class MycroftKodi(MycroftSkill):
     @intent_file_handler('kodi.mycroft.volume3.intent')
     def handle_kodi_mycroft_volume3(self, message):
 
-        volumePercents=30;
+        volumePercents=30
         server = KodiJSONClient('192.168.1.107', '8080', 'kodi', 'kodi')
         kodiApplication=server.Application
         kodiApplication.SetVolume(volumePercents)
@@ -22,7 +22,7 @@ class MycroftKodi(MycroftSkill):
     @intent_file_handler('kodi.mycroft.volume8.intent')
     def handle_kodi_mycroft_volume3(self, message):
 
-        volumePercents=80;
+        volumePercents=80
         server = KodiJSONClient('192.168.1.107', '8080', 'kodi', 'kodi')
         kodiApplication=server.Application
         kodiApplication.SetVolume(volumePercents)
