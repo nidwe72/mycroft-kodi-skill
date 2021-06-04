@@ -1,6 +1,6 @@
 from mycroft import MycroftSkill, intent_file_handler
 from kodijsonrpc import *
-import beepy
+import beepy as beep
 
 class MycroftKodi(MycroftSkill):
 
@@ -18,7 +18,7 @@ class MycroftKodi(MycroftSkill):
             server = KodiJSONClient('192.168.1.107', '8080', 'kodi', 'kodi')
             kodiApplication=server.Application
             kodiApplication.SetVolume(volumePercents)
-            beep(sound='coin')
+            beep.beep(sound='coin')
 
 def create_skill():
     return MycroftKodi()
