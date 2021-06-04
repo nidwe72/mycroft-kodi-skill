@@ -10,6 +10,7 @@ class MycroftKodi(MycroftSkill):
     def initialize(self):
         self.register_entity_file('volume.entity')
 
+
     @intent_file_handler('kodi.mycroft.volume.intent')
     def handle_kodi_mycroft(self, message):
         volume = message.data.get('volume')
