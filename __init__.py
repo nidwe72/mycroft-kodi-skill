@@ -1,6 +1,7 @@
 from mycroft import MycroftSkill, intent_file_handler
 from kodijsonrpc import *
 import beepy as beep
+from qhue import Bridge
 
 class MycroftKodi(MycroftSkill):
 
@@ -40,6 +41,17 @@ class MycroftKodi(MycroftSkill):
             kodiApplication=server.Application
             kodiApplication.SetVolume(volumePercents)
             beep.beep(sound='coin')
+
+    @intent_file_handler('kodi.mycroft.tunOnLights.intent')
+    def handle_kodi_mycroft(self, message):
+
+        b = Bridge("192.168.1.101", 'DexVLlzvvv5jIYCVmBNKlX4GNdP3nPsXyzm-kTRM')
+
+        lights = b.lights   # Creates a new Resource with its own URL
+        b.lights[1].state(on=True)
+        b.lights[1].state(bri=128, hue=9000,sat=255)
+        
+
 
 def create_skill():
     return MycroftKodi()
