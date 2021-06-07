@@ -42,7 +42,7 @@ class MycroftKodi(MycroftSkill):
             kodiApplication.SetVolume(volumePercents)
             beep.beep(sound='coin')
 
-    @intent_file_handler('kodi.mycroft.tunOnLights.intent')
+    @intent_file_handler('kodi.mycroft.turnOnLights.intent')
     def handle_kodi_mycroft(self, message):
 
         b = Bridge("192.168.1.101", 'DexVLlzvvv5jIYCVmBNKlX4GNdP3nPsXyzm-kTRM')
