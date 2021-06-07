@@ -44,13 +44,13 @@ class MycroftKodi(MycroftSkill):
 
     @intent_file_handler('kodi.mycroft.turnOnLights.intent')
     def handle_kodi_mycroft(self, message):
-
+        beep.beep(sound='coin')
         b = Bridge("192.168.1.101", 'DexVLlzvvv5jIYCVmBNKlX4GNdP3nPsXyzm-kTRM')
 
         lights = b.lights   # Creates a new Resource with its own URL
         b.lights[1].state(on=True)
         b.lights[1].state(bri=128, hue=9000,sat=255)
-        beep.beep(sound='coin')
+
         
 
 
