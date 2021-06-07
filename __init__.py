@@ -50,6 +50,7 @@ class MycroftKodi(MycroftSkill):
         lights = b.lights   # Creates a new Resource with its own URL
         b.lights[1].state(on=True)
         b.lights[1].state(bri=128, hue=9000,sat=255)
+        beep.beep(sound='coin')
         
 
 
