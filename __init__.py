@@ -89,9 +89,23 @@ class MycroftKodi(MycroftSkill):
         b.lights[7].state(bri=203, hue=7613,sat=203)
 
 
+    @intent_file_handler('kodi.mycroft.turnOnAllLights100Percent.intent')
+    def handle_kodi_mycroft_turnOnAllLights100Percent(self, message):
+        beep.beep(sound='coin')
+        b = Bridge("192.168.1.101", 'DexVLlzvvv5jIYCVmBNKlX4GNdP3nPsXyzm-kTRM')
 
+        b.lights[1].state(on=True)
+        b.lights[1].state(bri=254, hue=7613,sat=203)
 
-        
+        b.lights[2].state(on=True)
+        b.lights[2].state(bri=254, hue=7613,sat=203)
+
+        b.lights[6].state(on=True)
+        b.lights[6].state(bri=254, hue=7613,sat=203)
+
+        b.lights[7].state(on=True)
+        b.lights[7].state(bri=254, hue=7613,sat=203)
+
 
 
 def create_skill():
