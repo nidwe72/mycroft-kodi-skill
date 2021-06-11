@@ -33,7 +33,7 @@ class MycroftKodi(MycroftSkill):
 
 
     @intent_file_handler('kodi.mycroft.volume.intent')
-    def handle_kodi_mycroft(self, message):
+    def handle_kodi_mycroft_volume(self, message):
 
         volume = message.data.get('volume')
         if volume is not None:
@@ -45,7 +45,7 @@ class MycroftKodi(MycroftSkill):
 
 
     @intent_file_handler('kodi.mycroft.turnOnLights.intent')
-    def handle_kodi_mycroft(self, message):
+    def handle_kodi_mycroft_turnOnLights(self, message):
         beep.beep(sound='coin')
         b = Bridge("192.168.1.101", 'DexVLlzvvv5jIYCVmBNKlX4GNdP3nPsXyzm-kTRM')
 
@@ -62,7 +62,7 @@ class MycroftKodi(MycroftSkill):
         b.lights[7].state(bri=28, hue=7613,sat=203)
 
     @intent_file_handler('kodi.mycroft.turnOffLights.intent')
-    def handle_kodi_mycroft(self, message):
+    def handle_kodi_mycroft_turnOnLights(self, message):
         beep.beep(sound='coin')
         b = Bridge("192.168.1.101", 'DexVLlzvvv5jIYCVmBNKlX4GNdP3nPsXyzm-kTRM')
 
