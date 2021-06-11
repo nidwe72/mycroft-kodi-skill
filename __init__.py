@@ -106,6 +106,22 @@ class MycroftKodi(MycroftSkill):
         b.lights[7].state(on=True)
         b.lights[7].state(bri=254, hue=7613,sat=203)
 
+    @intent_file_handler('kodi.mycroft.turnOnNightLights.intent')
+    def handle_kodi_mycroft_turnOnNightLights(self, message):
+        beep.beep(sound='coin')
+        b = Bridge("192.168.1.101", 'DexVLlzvvv5jIYCVmBNKlX4GNdP3nPsXyzm-kTRM')
+
+        b.lights[1].state(on=True)
+        b.lights[1].state(bri=38, hue=7613,sat=203)
+
+        b.lights[2].state(on=True)
+        b.lights[2].state(bri=41, hue=7613,sat=203)
+
+        b.lights[6].state(on=True)
+        b.lights[6].state(bri=5, hue=7613,sat=203)
+
+        b.lights[7].state(on=True)
+        b.lights[7].state(bri=5, hue=7613,sat=203)
 
 
 def create_skill():
