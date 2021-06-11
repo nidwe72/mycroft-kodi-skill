@@ -62,7 +62,7 @@ class MycroftKodi(MycroftSkill):
         b.lights[7].state(bri=28, hue=7613,sat=203)
 
     @intent_file_handler('kodi.mycroft.turnOffLights.intent')
-    def handle_kodi_mycroft_turnOnLights(self, message):
+    def handle_kodi_mycroft_turnOffLights(self, message):
         beep.beep(sound='coin')
         b = Bridge("192.168.1.101", 'DexVLlzvvv5jIYCVmBNKlX4GNdP3nPsXyzm-kTRM')
 
